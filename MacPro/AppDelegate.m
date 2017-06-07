@@ -23,9 +23,6 @@
     _mainWindow = [[MainWindowController alloc]initWithWindowNibName:@"MainWindowController"];
     [[_mainWindow window] center];
     
-
-    
-    
     // 创建NSStatusItem并添加到系统状态栏上
     self.demoItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     // 设置NSStatusItem 的图片
@@ -69,22 +66,13 @@
 }
 
 
+//通过点击dock上的图标将窗口重新打开
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
-    
-    
-    
-//    if (!flag){
-//        
-//        [_mainWindow.window makeKeyAndOrderFront:self];
-//        return YES;
-//        
-//    }
-    
+    if (!flag){
+        [_mainWindow.window makeKeyAndOrderFront:self];
+        return YES;
+    }
     return NO;
-    
 }
-
-
-
 
 @end

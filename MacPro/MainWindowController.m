@@ -43,10 +43,10 @@
 //mini模式
 - (IBAction)miniaction:(id)sender {
     
-    // 3.设为KeyWindow并前置
+    // 设为KeyWindow并前置
     [self.miniWindow.window makeKeyAndOrderFront:self];
     
-    // 4.关闭现在的登录窗口
+    // 关闭现在的登录窗口
     [self.window orderOut:self];
     /*
     [self.miniWindow showWindow:nil];
