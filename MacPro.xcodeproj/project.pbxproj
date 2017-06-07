@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016C6A521EE6E896002AD8A1 /* SBPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C6A501EE6E896002AD8A1 /* SBPopViewController.m */; };
+		016C6A531EE6E896002AD8A1 /* SBPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C6A511EE6E896002AD8A1 /* SBPopViewController.xib */; };
+		01716EDB1EE64A2A005E066E /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716ED91EE64A2A005E066E /* MainWindowController.m */; };
+		01716EDC1EE64A2A005E066E /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01716EDA1EE64A2A005E066E /* MainWindowController.xib */; };
+		01716EDE1EE64B48005E066E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01716EDD1EE64B48005E066E /* Main.storyboard */; };
+		01716EE21EE64CD1005E066E /* NewsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716EE01EE64CD1005E066E /* NewsWindowController.m */; };
+		01716EE31EE64CD1005E066E /* NewsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01716EE11EE64CD1005E066E /* NewsWindowController.xib */; };
+		01716EF11EE68C13005E066E /* KSLoginWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716EEF1EE68C13005E066E /* KSLoginWindowController.m */; };
+		01716EF21EE68C13005E066E /* KSLoginWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01716EF01EE68C13005E066E /* KSLoginWindowController.xib */; };
+		01716F011EE68D62005E066E /* KSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716EFF1EE68D62005E066E /* KSLoginViewController.m */; };
+		01716F051EE68D70005E066E /* KSLoginWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716F041EE68D70005E066E /* KSLoginWindow.m */; };
+		01716F071EE69918005E066E /* KSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01716F061EE69918005E066E /* KSLoginViewController.xib */; };
+		01716F0B1EE6C8D9005E066E /* KSLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716F091EE6C8D9005E066E /* KSLoginVC.m */; };
+		01716F0E1EE6C8F3005E066E /* KSLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01716F0D1EE6C8F3005E066E /* KSLoginVC.xib */; };
 		0190320C1EE503F000941F3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190320B1EE503F000941F3D /* AppDelegate.m */; };
 		0190320F1EE503F000941F3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190320E1EE503F000941F3D /* main.m */; };
 		019032121EE503F000941F3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019032111EE503F000941F3D /* ViewController.m */; };
 		019032141EE503F000941F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019032131EE503F000941F3D /* Assets.xcassets */; };
-		019032171EE503F000941F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019032151EE503F000941F3D /* Main.storyboard */; };
 		019032221EE503F000941F3D /* MacProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 019032211EE503F000941F3D /* MacProTests.m */; };
 		0190322D1EE503F000941F3D /* MacProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190322C1EE503F000941F3D /* MacProUITests.m */; };
+		80ABF090109598695DA6775E /* libPods-MacPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5414396332330E0EA5E8A0 /* libPods-MacPro.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +48,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016C6A4F1EE6E896002AD8A1 /* SBPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPopViewController.h; sourceTree = "<group>"; };
+		016C6A501EE6E896002AD8A1 /* SBPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPopViewController.m; sourceTree = "<group>"; };
+		016C6A511EE6E896002AD8A1 /* SBPopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBPopViewController.xib; sourceTree = "<group>"; };
+		01716ED81EE64A2A005E066E /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		01716ED91EE64A2A005E066E /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		01716EDA1EE64A2A005E066E /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		01716EDD1EE64B48005E066E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		01716EDF1EE64CD1005E066E /* NewsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsWindowController.h; sourceTree = "<group>"; };
+		01716EE01EE64CD1005E066E /* NewsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsWindowController.m; sourceTree = "<group>"; };
+		01716EE11EE64CD1005E066E /* NewsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsWindowController.xib; sourceTree = "<group>"; };
+		01716EEE1EE68C13005E066E /* KSLoginWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginWindowController.h; sourceTree = "<group>"; };
+		01716EEF1EE68C13005E066E /* KSLoginWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginWindowController.m; sourceTree = "<group>"; };
+		01716EF01EE68C13005E066E /* KSLoginWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSLoginWindowController.xib; sourceTree = "<group>"; };
+		01716EFE1EE68D62005E066E /* KSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginViewController.h; sourceTree = "<group>"; };
+		01716EFF1EE68D62005E066E /* KSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginViewController.m; sourceTree = "<group>"; };
+		01716F031EE68D70005E066E /* KSLoginWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginWindow.h; sourceTree = "<group>"; };
+		01716F041EE68D70005E066E /* KSLoginWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginWindow.m; sourceTree = "<group>"; };
+		01716F061EE69918005E066E /* KSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSLoginViewController.xib; sourceTree = "<group>"; };
+		01716F081EE6C8D9005E066E /* KSLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSLoginVC.h; sourceTree = "<group>"; };
+		01716F091EE6C8D9005E066E /* KSLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSLoginVC.m; sourceTree = "<group>"; };
+		01716F0D1EE6C8F3005E066E /* KSLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSLoginVC.xib; sourceTree = "<group>"; };
 		019032071EE503F000941F3D /* MacPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190320A1EE503F000941F3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0190320B1EE503F000941F3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,7 +76,6 @@
 		019032101EE503F000941F3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		019032111EE503F000941F3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		019032131EE503F000941F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		019032161EE503F000941F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		019032181EE503F000941F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0190321D1EE503F000941F3D /* MacProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		019032211EE503F000941F3D /* MacProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacProTests.m; sourceTree = "<group>"; };
@@ -49,6 +83,9 @@
 		019032281EE503F000941F3D /* MacProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190322C1EE503F000941F3D /* MacProUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacProUITests.m; sourceTree = "<group>"; };
 		0190322E1EE503F000941F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5414396332330E0EA5E8A0 /* libPods-MacPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MacPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87C9A5B084F98260D08961F /* Pods-MacPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacPro/Pods-MacPro.release.xcconfig"; sourceTree = "<group>"; };
+		FACD18D6429221EC487994E0 /* Pods-MacPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacPro/Pods-MacPro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80ABF090109598695DA6775E /* libPods-MacPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +114,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01716EE41EE68BC7005E066E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				01716EEE1EE68C13005E066E /* KSLoginWindowController.h */,
+				01716EEF1EE68C13005E066E /* KSLoginWindowController.m */,
+				01716EF01EE68C13005E066E /* KSLoginWindowController.xib */,
+				01716EFE1EE68D62005E066E /* KSLoginViewController.h */,
+				01716EFF1EE68D62005E066E /* KSLoginViewController.m */,
+				01716F061EE69918005E066E /* KSLoginViewController.xib */,
+				01716F031EE68D70005E066E /* KSLoginWindow.h */,
+				01716F041EE68D70005E066E /* KSLoginWindow.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		019031FE1EE503F000941F3D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +136,8 @@
 				019032201EE503F000941F3D /* MacProTests */,
 				0190322B1EE503F000941F3D /* MacProUITests */,
 				019032081EE503F000941F3D /* Products */,
+				72703786D9F8FF1951A641E3 /* Pods */,
+				F621FB2B2E6B35DD78F6A6F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +158,21 @@
 				0190320B1EE503F000941F3D /* AppDelegate.m */,
 				019032101EE503F000941F3D /* ViewController.h */,
 				019032111EE503F000941F3D /* ViewController.m */,
+				01716ED81EE64A2A005E066E /* MainWindowController.h */,
+				01716ED91EE64A2A005E066E /* MainWindowController.m */,
+				01716EDA1EE64A2A005E066E /* MainWindowController.xib */,
+				01716EDF1EE64CD1005E066E /* NewsWindowController.h */,
+				01716EE01EE64CD1005E066E /* NewsWindowController.m */,
+				01716EE11EE64CD1005E066E /* NewsWindowController.xib */,
+				01716F081EE6C8D9005E066E /* KSLoginVC.h */,
+				01716F091EE6C8D9005E066E /* KSLoginVC.m */,
+				01716F0D1EE6C8F3005E066E /* KSLoginVC.xib */,
+				016C6A4F1EE6E896002AD8A1 /* SBPopViewController.h */,
+				016C6A501EE6E896002AD8A1 /* SBPopViewController.m */,
+				016C6A511EE6E896002AD8A1 /* SBPopViewController.xib */,
+				01716EE41EE68BC7005E066E /* Login */,
+				01716EDD1EE64B48005E066E /* Main.storyboard */,
 				019032131EE503F000941F3D /* Assets.xcassets */,
-				019032151EE503F000941F3D /* Main.storyboard */,
 				019032181EE503F000941F3D /* Info.plist */,
 				0190320D1EE503F000941F3D /* Supporting Files */,
 			);
@@ -137,6 +205,23 @@
 			path = MacProUITests;
 			sourceTree = "<group>";
 		};
+		72703786D9F8FF1951A641E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FACD18D6429221EC487994E0 /* Pods-MacPro.debug.xcconfig */,
+				F87C9A5B084F98260D08961F /* Pods-MacPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F621FB2B2E6B35DD78F6A6F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E5414396332330E0EA5E8A0 /* libPods-MacPro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 019032311EE503F000941F3D /* Build configuration list for PBXNativeTarget "MacPro" */;
 			buildPhases = (
+				86E91182C08E794EE9E5A263 /* [CP] Check Pods Manifest.lock */,
 				019032031EE503F000941F3D /* Sources */,
 				019032041EE503F000941F3D /* Frameworks */,
 				019032051EE503F000941F3D /* Resources */,
+				9350730424985F397971A358 /* [CP] Embed Pods Frameworks */,
+				19C168B1ED311F2352763756 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,8 +334,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01716EF21EE68C13005E066E /* KSLoginWindowController.xib in Resources */,
+				01716EDE1EE64B48005E066E /* Main.storyboard in Resources */,
+				01716F071EE69918005E066E /* KSLoginViewController.xib in Resources */,
+				016C6A531EE6E896002AD8A1 /* SBPopViewController.xib in Resources */,
 				019032141EE503F000941F3D /* Assets.xcassets in Resources */,
-				019032171EE503F000941F3D /* Main.storyboard in Resources */,
+				01716EE31EE64CD1005E066E /* NewsWindowController.xib in Resources */,
+				01716F0E1EE6C8F3005E066E /* KSLoginVC.xib in Resources */,
+				01716EDC1EE64A2A005E066E /* MainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,14 +361,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19C168B1ED311F2352763756 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacPro/Pods-MacPro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E91182C08E794EE9E5A263 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9350730424985F397971A358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacPro/Pods-MacPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		019032031EE503F000941F3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01716EE21EE64CD1005E066E /* NewsWindowController.m in Sources */,
+				01716F051EE68D70005E066E /* KSLoginWindow.m in Sources */,
 				019032121EE503F000941F3D /* ViewController.m in Sources */,
+				01716F0B1EE6C8D9005E066E /* KSLoginVC.m in Sources */,
 				0190320F1EE503F000941F3D /* main.m in Sources */,
+				01716EDB1EE64A2A005E066E /* MainWindowController.m in Sources */,
+				01716EF11EE68C13005E066E /* KSLoginWindowController.m in Sources */,
+				01716F011EE68D62005E066E /* KSLoginViewController.m in Sources */,
 				0190320C1EE503F000941F3D /* AppDelegate.m in Sources */,
+				016C6A521EE6E896002AD8A1 /* SBPopViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,17 +457,6 @@
 			targetProxy = 019032291EE503F000941F3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		019032151EE503F000941F3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				019032161EE503F000941F3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0190322F1EE503F000941F3D /* Debug */ = {
@@ -412,27 +550,33 @@
 		};
 		019032321EE503F000941F3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FACD18D6429221EC487994E0 /* Pods-MacPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 599FJK8FBV;
 				INFOPLIST_FILE = MacPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaruzhen.MacPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		019032331EE503F000941F3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87C9A5B084F98260D08961F /* Pods-MacPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 599FJK8FBV;
 				INFOPLIST_FILE = MacPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaruzhen.MacPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -509,6 +653,7 @@
 				019032331EE503F000941F3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		019032341EE503F000941F3D /* Build configuration list for PBXNativeTarget "MacProTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +662,7 @@
 				019032361EE503F000941F3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		019032371EE503F000941F3D /* Build configuration list for PBXNativeTarget "MacProUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +671,7 @@
 				019032391EE503F000941F3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
