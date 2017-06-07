@@ -33,28 +33,21 @@ static NewsWindowController *loginWC=nil;
 + (instancetype)windowController{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        loginWC= [[NewsWindowController alloc]initWithWindowNibName:@"NewsWindowController"];
     });
+    loginWC= [[NewsWindowController alloc]initWithWindowNibName:@"NewsWindowController"];
     // 设置动画样式
     [loginWC.window setAnimationBehavior:NSWindowAnimationBehaviorDocumentWindow];
     [loginWC.window center];
     return loginWC;
 }
 
-
 - (void)windowDidLoad {
     [super windowDidLoad];
-    AppDelegate *appDelegate = (AppDelegate *)[NSApplication sharedApplication].delegate;
-    appDelegate.mainWindowController = self;
-    
     [self.window center];
-
     [self.window setBackgroundColor:[NSColor whiteColor]];
-
     [[self window] setMovableByWindowBackground:NO];
     [[self.window standardWindowButton:NSWindowZoomButton] setHidden:YES];
     [[self.window standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
-    
     NSColor *color = [NSColor blueColor];
     NSMutableAttributedString *colorTitle = [[NSMutableAttributedString alloc] initWithAttributedString:[self.accountLoginButton attributedTitle]];
     NSRange titleRange = NSMakeRange(0, [colorTitle length]);
@@ -100,9 +93,6 @@ static NewsWindowController *loginWC=nil;
     self.gainVerificationCodeButton.hidden = YES;
     self.accountTextfield.placeholderString = @"昵称/邮箱/手机号";
     self.passwordTextfield.placeholderString = @"密码";
-    
-    
-
 }
 
 - (IBAction)phoneLogin:(id)sender {

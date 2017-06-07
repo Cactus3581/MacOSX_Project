@@ -21,11 +21,9 @@
 
 #pragma mark - 初始化视图
 - (void)initView{
-    
     // 设置背景色为白色
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
-    
 }
 
 #pragma mark - 点击了登录Button

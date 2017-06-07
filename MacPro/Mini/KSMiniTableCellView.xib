@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView identifier="KSMiniTableCellView" id="XzF-cE-v6e" customClass="KSMiniTableCellView">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZE-eU-5YJ">
+                    <rect key="frame" x="3" y="22" width="37" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="83y-WE-Tfm"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" title="Label" id="Dh3-oc-2mb">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa2-YF-dg1">
+                    <rect key="frame" x="3" y="5" width="244" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" title="Label" id="vVh-yq-2iY">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UAP-4z-I85">
+                    <rect key="frame" x="219" y="20" width="32" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="1GB-ms-cTV"/>
+                        <constraint firstAttribute="height" constant="20" id="r7y-Pi-y7q"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="playAudio1" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F2U-a4-uaa">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="kZE-eU-5YJ" firstAttribute="leading" secondItem="XzF-cE-v6e" secondAttribute="leading" constant="5" id="2Wq-jY-lcW"/>
+                <constraint firstItem="xa2-YF-dg1" firstAttribute="top" secondItem="kZE-eU-5YJ" secondAttribute="bottom" id="8gz-xY-7v0"/>
+                <constraint firstItem="UAP-4z-I85" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kZE-eU-5YJ" secondAttribute="trailing" constant="5" id="DE7-dj-zfX"/>
+                <constraint firstAttribute="bottom" secondItem="xa2-YF-dg1" secondAttribute="bottom" constant="5" id="etU-nW-DJK"/>
+                <constraint firstItem="UAP-4z-I85" firstAttribute="top" secondItem="XzF-cE-v6e" secondAttribute="top" constant="5" id="qkP-Vd-Q9g"/>
+                <constraint firstAttribute="trailing" secondItem="UAP-4z-I85" secondAttribute="trailing" constant="5" id="sEX-mJ-SBM"/>
+                <constraint firstItem="kZE-eU-5YJ" firstAttribute="top" secondItem="XzF-cE-v6e" secondAttribute="top" constant="5" id="szs-0m-gtc"/>
+                <constraint firstItem="xa2-YF-dg1" firstAttribute="leading" secondItem="XzF-cE-v6e" secondAttribute="leading" constant="5" id="uIE-DP-d9x"/>
+                <constraint firstAttribute="trailing" secondItem="xa2-YF-dg1" secondAttribute="trailing" constant="5" id="vVP-8x-YgW"/>
+            </constraints>
+            <connections>
+                <outlet property="playVoice" destination="UAP-4z-I85" id="qfV-h7-r38"/>
+                <outlet property="wordMeans" destination="xa2-YF-dg1" id="Fms-sO-FQx"/>
+                <outlet property="wordName" destination="kZE-eU-5YJ" id="W6z-yi-fBU"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="131"/>
+        </tableCellView>
+    </objects>
+    <resources>
+        <image name="playAudio1" width="20" height="20"/>
+    </resources>
+</document>

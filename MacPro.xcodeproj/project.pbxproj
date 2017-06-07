@@ -27,6 +27,13 @@
 		019032141EE503F000941F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019032131EE503F000941F3D /* Assets.xcassets */; };
 		019032221EE503F000941F3D /* MacProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 019032211EE503F000941F3D /* MacProTests.m */; };
 		0190322D1EE503F000941F3D /* MacProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0190322C1EE503F000941F3D /* MacProUITests.m */; };
+		0195373A1EE7AF4500C810AD /* KSMiniWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 019537391EE7AF4500C810AD /* KSMiniWindow.m */; };
+		0195373E1EE7AF7100C810AD /* KSMiniWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195373C1EE7AF7100C810AD /* KSMiniWindowController.m */; };
+		0195373F1EE7AF7100C810AD /* KSMiniWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0195373D1EE7AF7100C810AD /* KSMiniWindowController.xib */; };
+		019537431EE7AF8700C810AD /* KSMiniViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019537411EE7AF8700C810AD /* KSMiniViewController.m */; };
+		019537441EE7AF8700C810AD /* KSMiniViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019537421EE7AF8700C810AD /* KSMiniViewController.xib */; };
+		0195374D1EE7E7FE00C810AD /* KSMiniTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195374C1EE7E7FE00C810AD /* KSMiniTableCellView.m */; };
+		0195374F1EE7E80D00C810AD /* KSMiniTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0195374E1EE7E80D00C810AD /* KSMiniTableCellView.xib */; };
 		80ABF090109598695DA6775E /* libPods-MacPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5414396332330E0EA5E8A0 /* libPods-MacPro.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +90,17 @@
 		019032281EE503F000941F3D /* MacProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190322C1EE503F000941F3D /* MacProUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacProUITests.m; sourceTree = "<group>"; };
 		0190322E1EE503F000941F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019537381EE7AF4500C810AD /* KSMiniWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMiniWindow.h; sourceTree = "<group>"; };
+		019537391EE7AF4500C810AD /* KSMiniWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMiniWindow.m; sourceTree = "<group>"; };
+		0195373B1EE7AF7100C810AD /* KSMiniWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMiniWindowController.h; sourceTree = "<group>"; };
+		0195373C1EE7AF7100C810AD /* KSMiniWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMiniWindowController.m; sourceTree = "<group>"; };
+		0195373D1EE7AF7100C810AD /* KSMiniWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSMiniWindowController.xib; sourceTree = "<group>"; };
+		019537401EE7AF8700C810AD /* KSMiniViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMiniViewController.h; sourceTree = "<group>"; };
+		019537411EE7AF8700C810AD /* KSMiniViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMiniViewController.m; sourceTree = "<group>"; };
+		019537421EE7AF8700C810AD /* KSMiniViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSMiniViewController.xib; sourceTree = "<group>"; };
+		0195374B1EE7E7FE00C810AD /* KSMiniTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMiniTableCellView.h; sourceTree = "<group>"; };
+		0195374C1EE7E7FE00C810AD /* KSMiniTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMiniTableCellView.m; sourceTree = "<group>"; };
+		0195374E1EE7E80D00C810AD /* KSMiniTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSMiniTableCellView.xib; sourceTree = "<group>"; };
 		6E5414396332330E0EA5E8A0 /* libPods-MacPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MacPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87C9A5B084F98260D08961F /* Pods-MacPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacPro/Pods-MacPro.release.xcconfig"; sourceTree = "<group>"; };
 		FACD18D6429221EC487994E0 /* Pods-MacPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacPro/Pods-MacPro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +188,8 @@
 				016C6A4F1EE6E896002AD8A1 /* SBPopViewController.h */,
 				016C6A501EE6E896002AD8A1 /* SBPopViewController.m */,
 				016C6A511EE6E896002AD8A1 /* SBPopViewController.xib */,
+				019537311EE7AEDF00C810AD /* Mini */,
+				019537301EE78F4A00C810AD /* Pop_Login */,
 				01716EE41EE68BC7005E066E /* Login */,
 				01716EDD1EE64B48005E066E /* Main.storyboard */,
 				019032131EE503F000941F3D /* Assets.xcassets */,
@@ -203,6 +223,31 @@
 				0190322E1EE503F000941F3D /* Info.plist */,
 			);
 			path = MacProUITests;
+			sourceTree = "<group>";
+		};
+		019537301EE78F4A00C810AD /* Pop_Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pop_Login;
+			sourceTree = "<group>";
+		};
+		019537311EE7AEDF00C810AD /* Mini */ = {
+			isa = PBXGroup;
+			children = (
+				019537381EE7AF4500C810AD /* KSMiniWindow.h */,
+				019537391EE7AF4500C810AD /* KSMiniWindow.m */,
+				0195373B1EE7AF7100C810AD /* KSMiniWindowController.h */,
+				0195373C1EE7AF7100C810AD /* KSMiniWindowController.m */,
+				0195373D1EE7AF7100C810AD /* KSMiniWindowController.xib */,
+				019537401EE7AF8700C810AD /* KSMiniViewController.h */,
+				019537411EE7AF8700C810AD /* KSMiniViewController.m */,
+				019537421EE7AF8700C810AD /* KSMiniViewController.xib */,
+				0195374B1EE7E7FE00C810AD /* KSMiniTableCellView.h */,
+				0195374C1EE7E7FE00C810AD /* KSMiniTableCellView.m */,
+				0195374E1EE7E80D00C810AD /* KSMiniTableCellView.xib */,
+			);
+			path = Mini;
 			sourceTree = "<group>";
 		};
 		72703786D9F8FF1951A641E3 /* Pods */ = {
@@ -338,9 +383,12 @@
 				01716EDE1EE64B48005E066E /* Main.storyboard in Resources */,
 				01716F071EE69918005E066E /* KSLoginViewController.xib in Resources */,
 				016C6A531EE6E896002AD8A1 /* SBPopViewController.xib in Resources */,
+				0195374F1EE7E80D00C810AD /* KSMiniTableCellView.xib in Resources */,
 				019032141EE503F000941F3D /* Assets.xcassets in Resources */,
+				019537441EE7AF8700C810AD /* KSMiniViewController.xib in Resources */,
 				01716EE31EE64CD1005E066E /* NewsWindowController.xib in Resources */,
 				01716F0E1EE6C8F3005E066E /* KSLoginVC.xib in Resources */,
+				0195373F1EE7AF7100C810AD /* KSMiniWindowController.xib in Resources */,
 				01716EDC1EE64A2A005E066E /* MainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,8 +462,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0195374D1EE7E7FE00C810AD /* KSMiniTableCellView.m in Sources */,
 				01716EE21EE64CD1005E066E /* NewsWindowController.m in Sources */,
+				0195373E1EE7AF7100C810AD /* KSMiniWindowController.m in Sources */,
 				01716F051EE68D70005E066E /* KSLoginWindow.m in Sources */,
+				019537431EE7AF8700C810AD /* KSMiniViewController.m in Sources */,
 				019032121EE503F000941F3D /* ViewController.m in Sources */,
 				01716F0B1EE6C8D9005E066E /* KSLoginVC.m in Sources */,
 				0190320F1EE503F000941F3D /* main.m in Sources */,
@@ -424,6 +475,7 @@
 				01716F011EE68D62005E066E /* KSLoginViewController.m in Sources */,
 				0190320C1EE503F000941F3D /* AppDelegate.m in Sources */,
 				016C6A521EE6E896002AD8A1 /* SBPopViewController.m in Sources */,
+				0195373A1EE7AF4500C810AD /* KSMiniWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
