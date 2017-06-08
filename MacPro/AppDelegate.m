@@ -14,6 +14,8 @@
 @property (nonatomic,strong) MainWindowController *mainWindow;
 @property (nonatomic ,strong) NSStatusItem *demoItem;     // 添加状态item属性
 @property (nonatomic, strong) NSPopover *popover;   // 弹窗
+@property (weak) IBOutlet NSMenuItem *undoButton;
+
 @end
 
 @implementation AppDelegate
@@ -22,6 +24,8 @@
     // Insert code here to initialize your application
     _mainWindow = [[MainWindowController alloc]initWithWindowNibName:@"MainWindowController"];
     [[_mainWindow window] center];
+    
+    
     
     // 创建NSStatusItem并添加到系统状态栏上
     self.demoItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -51,12 +55,7 @@
     }];
 
 }
-
-
-
-
-
-// 显示popover方法
+#pragma mark -显示popover方法
 - (void)showMyPopover:(NSStatusBarButton *)button{
     [_popover showRelativeToRect:button.bounds ofView:button preferredEdge:NSRectEdgeMaxY];
 }
@@ -70,9 +69,60 @@
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
     if (!flag){
         [_mainWindow.window makeKeyAndOrderFront:self];
+        NSLog(@"flag1 = %d",flag);
+
         return YES;
     }
+    NSLog(@"flag2 = %d",flag);
+
     return NO;
 }
 
+
+
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender{
+    return YES;
+}
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename{
+    return YES;
+
+}
+- (void)application:(NSApplication *)sender openFiles:(NSArray<NSString *> *)filenames{
+
+}
+- (BOOL)application:(NSApplication *)sender openTempFile:(NSString *)filename
+{
+    return YES;
+
+}
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
+{
+    return YES;
+
+}
+- (BOOL)applicationOpenUntitledFile:(NSApplication *)sender
+{
+    return YES;
+
+}
+- (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename
+{
+    return YES;
+
+}
+- (BOOL)application:(NSApplication *)sender printFile:(NSString *)filename
+{
+    return YES;
+
+}
+- (NSApplicationPrintReply)application:(NSApplication *)application printFiles:(NSArray<NSString *> *)fileNames withSettings:(NSDictionary<NSString *, id> *)printSettings showPrintPanels:(BOOL)showPrintPanels
+{
+    return YES;
+
+}
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return YES;
+
+}
 @end

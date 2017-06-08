@@ -47,7 +47,23 @@
                             <action selector="miniaction:" target="-2" id="jiT-yT-Xff"/>
                         </connections>
                     </button>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coX-0j-xUm">
+                        <rect key="frame" x="50" y="100" width="330" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="YYk-MT-Oiw"/>
+                        </constraints>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="搜索" usesSingleLineMode="YES" bezelStyle="round" id="6R2-0o-got">
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                    </searchField>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="coX-0j-xUm" secondAttribute="bottom" constant="100" id="6Ln-x5-dq6"/>
+                    <constraint firstAttribute="trailing" secondItem="coX-0j-xUm" secondAttribute="trailing" constant="100" id="8mN-dk-aGf"/>
+                    <constraint firstItem="coX-0j-xUm" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="50" id="9Fa-jr-LCe"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>

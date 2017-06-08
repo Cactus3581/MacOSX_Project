@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015E1A901EE8FD3000BFF200 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E1A8F1EE8FD3000BFF200 /* SearchTextField.m */; };
+		015E1A931EE91DD600BFF200 /* KSMiniMeansCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E1A921EE91DD600BFF200 /* KSMiniMeansCellView.m */; };
+		015E1A951EE91DE300BFF200 /* KSMiniMeansCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E1A941EE91DE300BFF200 /* KSMiniMeansCellView.xib */; };
 		016C6A521EE6E896002AD8A1 /* SBPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C6A501EE6E896002AD8A1 /* SBPopViewController.m */; };
 		016C6A531EE6E896002AD8A1 /* SBPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C6A511EE6E896002AD8A1 /* SBPopViewController.xib */; };
 		01716EDB1EE64A2A005E066E /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01716ED91EE64A2A005E066E /* MainWindowController.m */; };
@@ -55,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015E1A8E1EE8FD3000BFF200 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextField.h; sourceTree = "<group>"; };
+		015E1A8F1EE8FD3000BFF200 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextField.m; sourceTree = "<group>"; };
+		015E1A911EE91DD600BFF200 /* KSMiniMeansCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMiniMeansCellView.h; sourceTree = "<group>"; };
+		015E1A921EE91DD600BFF200 /* KSMiniMeansCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMiniMeansCellView.m; sourceTree = "<group>"; };
+		015E1A941EE91DE300BFF200 /* KSMiniMeansCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSMiniMeansCellView.xib; sourceTree = "<group>"; };
 		016C6A4F1EE6E896002AD8A1 /* SBPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPopViewController.h; sourceTree = "<group>"; };
 		016C6A501EE6E896002AD8A1 /* SBPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPopViewController.m; sourceTree = "<group>"; };
 		016C6A511EE6E896002AD8A1 /* SBPopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBPopViewController.xib; sourceTree = "<group>"; };
@@ -246,6 +254,11 @@
 				0195374B1EE7E7FE00C810AD /* KSMiniTableCellView.h */,
 				0195374C1EE7E7FE00C810AD /* KSMiniTableCellView.m */,
 				0195374E1EE7E80D00C810AD /* KSMiniTableCellView.xib */,
+				015E1A911EE91DD600BFF200 /* KSMiniMeansCellView.h */,
+				015E1A921EE91DD600BFF200 /* KSMiniMeansCellView.m */,
+				015E1A941EE91DE300BFF200 /* KSMiniMeansCellView.xib */,
+				015E1A8E1EE8FD3000BFF200 /* SearchTextField.h */,
+				015E1A8F1EE8FD3000BFF200 /* SearchTextField.m */,
 			);
 			path = Mini;
 			sourceTree = "<group>";
@@ -381,6 +394,7 @@
 			files = (
 				01716EF21EE68C13005E066E /* KSLoginWindowController.xib in Resources */,
 				01716EDE1EE64B48005E066E /* Main.storyboard in Resources */,
+				015E1A951EE91DE300BFF200 /* KSMiniMeansCellView.xib in Resources */,
 				01716F071EE69918005E066E /* KSLoginViewController.xib in Resources */,
 				016C6A531EE6E896002AD8A1 /* SBPopViewController.xib in Resources */,
 				0195374F1EE7E80D00C810AD /* KSMiniTableCellView.xib in Resources */,
@@ -466,11 +480,13 @@
 				01716EE21EE64CD1005E066E /* NewsWindowController.m in Sources */,
 				0195373E1EE7AF7100C810AD /* KSMiniWindowController.m in Sources */,
 				01716F051EE68D70005E066E /* KSLoginWindow.m in Sources */,
+				015E1A901EE8FD3000BFF200 /* SearchTextField.m in Sources */,
 				019537431EE7AF8700C810AD /* KSMiniViewController.m in Sources */,
 				019032121EE503F000941F3D /* ViewController.m in Sources */,
 				01716F0B1EE6C8D9005E066E /* KSLoginVC.m in Sources */,
 				0190320F1EE503F000941F3D /* main.m in Sources */,
 				01716EDB1EE64A2A005E066E /* MainWindowController.m in Sources */,
+				015E1A931EE91DD600BFF200 /* KSMiniMeansCellView.m in Sources */,
 				01716EF11EE68C13005E066E /* KSLoginWindowController.m in Sources */,
 				01716F011EE68D62005E066E /* KSLoginViewController.m in Sources */,
 				0190320C1EE503F000941F3D /* AppDelegate.m in Sources */,

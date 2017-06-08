@@ -10,13 +10,17 @@
 #import "KSMiniTableCellView.h"
 #import "MainWindowController.h"
 #import "AppDelegate.h"
+#import "SearchTextField.h"
+#import "KSMiniMeansCellView.h"
 
-@interface KSMiniViewController ()<NSTableViewDelegate,NSTableViewDataSource,NSTextFieldDelegate>
-@property (weak) IBOutlet NSTextField *searchTextfield;
+
+@interface KSMiniViewController ()<NSTableViewDelegate,NSTableViewDataSource,SearchTextFieldDelegate>
+@property (weak) IBOutlet SearchTextField *searchTextfield;
 @property (weak) IBOutlet NSView *searchHeadView;
 @property (weak) IBOutlet NSTableView *tableView;
 @property (nonatomic,strong) NSMutableArray *array;
-
+@property (nonatomic,strong) NSMutableArray *searchArray;
+@property (nonatomic,strong) NSDictionary *searchwordDic;
 
 @end
 
@@ -28,8 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self initView];
-    //在ViewController中，以新Window的方式显示某个View,动画效果从上到下下拉出来
-//    [self presentViewControllerAsSheet:nil];
+
     
     self.searchHeadView.wantsLayer = YES;
     self.searchHeadView.layer.cornerRadius  =4;
@@ -37,6 +40,7 @@
     self.searchHeadView.layer.borderWidth   = 1;
     self.searchHeadView.layer.borderColor   = [NSColor lightGrayColor].CGColor;
     self.searchHeadView.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
+    //蓝色选择框
     self.searchTextfield.focusRingType = NSFocusRingTypeNone;
     self.searchTextfield.maximumNumberOfLines = 1;
     [[self.searchTextfield
@@ -54,6 +58,11 @@
     self.searchTextfield.delegate = self;
 }
 
+- (void)viewWillAppear {
+    [super viewWillAppear];
+    [self.searchTextfield becomeFirstResponder];
+}
+
 #pragma mark - 初始化视图
 - (void)initView {
     // 设置背景色为白色
@@ -63,6 +72,8 @@
 
 - (void)awakeFromNib {
     [self.tableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass(KSMiniTableCellView.class) bundle:nil] forIdentifier:@"KSMiniTableCellView"];
+    [self.tableView registerNib:[[NSNib alloc] initWithNibNamed:NSStringFromClass(KSMiniMeansCellView.class) bundle:nil] forIdentifier:@"KSMiniMeansCellView"];
+
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     //设置背景色
@@ -81,16 +92,38 @@
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 60;
+    if (self.searchwordDic.allKeys.count) {
+        return 80;
+    }
+    return 30;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    
+    if (self.searchwordDic.allKeys.count) {
+        return 1;
+    }
+    if (self.searchArray.count) {
+        return self.searchArray.count;
+    }
     return self.array.count;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
     KSMiniTableCellView *cellView = [tableView makeViewWithIdentifier:@"KSMiniTableCellView" owner:self];
-    cellView.wordName.stringValue = self.array[row];
+    
+    KSMiniMeansCellView *resultCellView = [tableView makeViewWithIdentifier:@"KSMiniMeansCellView" owner:self];
+    if (self.searchwordDic.allKeys.count) {
+        resultCellView.wordName.stringValue = self.searchwordDic[@"name"];
+        resultCellView.meansName.stringValue = self.searchwordDic[@"name"];
+        return resultCellView;
+    }else {
+        if (self.searchArray.count) {
+            cellView.wordName.stringValue = self.searchArray[row];
+        }else {
+            cellView.wordName.stringValue = self.array[row];
+        }
+    }
     return cellView;
 }
 
@@ -147,44 +180,46 @@
     return 0;
 }
 
-//下面这些方法用于子类进行重写
-//选择文本框时调用
-- (void)selectText:(nullable id)sender {
-    
+#pragma mark - textfield delegate
+//编辑输入时
+- (void)textDidEndEditingWith:(NSString *)stringValue {
+    NSLog(@"keyUp = %@",stringValue);
+    [self.searchArray removeAllObjects];
+    if ([self.array containsObject:self.searchTextfield.stringValue]) {
+        [self.searchArray addObject:stringValue];
+        [self.tableView reloadData];
+    }
 }
 
-//询问是否允许开始编辑文本框
-- (BOOL)textShouldBeginEditing:(NSText *)textObject {
-    return YES;
+//结束编辑时
+- (void)textEndEditing
+{
+    [self.searchArray removeAllObjects];
+    NSLog(@"stringValue = %@",self.searchTextfield.stringValue);
+    self.searchwordDic = @{@"name":@"word"};
+    [self.tableView reloadData];
 }
-
-
-//询问是否允许结束编辑文本框
-- (BOOL)textShouldEndEditing:(NSText *)textObject {
-    return YES;
-}
-
-//文本框已经开始进入编辑的通知
-- (void)textDidBeginEditing:(NSNotification *)notification {
-    
-}
-
-//文本框已经结束编辑的通知
-- (void)textDidEndEditing:(NSNotification *)notification {
-    
-}
-
-//文本框中文字发生变化的通知
-- (void)textDidChange:(NSNotification *)notification {
-    
-}
-
 
 - (NSMutableArray *)array {
     if (!_array) {
-        _array = [NSMutableArray arrayWithObjects:@"a",@"b",@"c", nil];
+        _array = [NSMutableArray arrayWithObjects:@"a",@"b",@"c",@"d",@"e",@"f",@"c", nil];
     }
     return _array;
+}
+
+- (NSMutableArray *)searchArray {
+    if (!_searchArray) {
+        _searchArray = [NSMutableArray array];
+    }
+    return _searchArray;
+}
+
+- (NSDictionary *)searchwordDic
+{
+    if (!_searchwordDic) {
+        _searchwordDic = [NSDictionary dictionary];
+    }
+    return _searchwordDic;
 }
 
 @end

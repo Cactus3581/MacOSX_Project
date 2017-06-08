@@ -140,6 +140,9 @@
                                                 </items>
                                             </menu>
                                         </menuItem>
+                                        <menuItem title="Spelling and Grammar" id="Dv1-io-Yv7">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
                                         <menuItem title="Speech" id="xrE-MZ-jX0">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Speech" id="3rS-ZA-NoH">
@@ -180,7 +183,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+                    <connections>
+                        <outlet property="undoButton" destination="dRJ-4n-Yzg" id="Ooz-tG-lzW"/>
+                    </connections>
+                </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-100" y="-101"/>

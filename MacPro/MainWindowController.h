@@ -9,5 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface MainWindowController : NSWindowController
-
++ (instancetype)windowController;
 @end

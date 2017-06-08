@@ -43,6 +43,8 @@ static NewsWindowController *loginWC=nil;
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    //层叠窗口
+    self.shouldCascadeWindows = YES;
     [self.window center];
     [self.window setBackgroundColor:[NSColor whiteColor]];
     [[self window] setMovableByWindowBackground:NO];

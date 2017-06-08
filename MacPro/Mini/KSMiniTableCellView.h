@@ -10,7 +10,5 @@
 
 @interface KSMiniTableCellView : NSTableCellView
 @property (weak) IBOutlet NSTextField *wordName;
-@property (weak) IBOutlet NSTextField *wordMeans;
-@property (weak) IBOutlet NSButton *playVoice;
 
 @end
