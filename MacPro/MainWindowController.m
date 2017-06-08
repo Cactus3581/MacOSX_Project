@@ -45,9 +45,18 @@ static MainWindowController *mainWC=nil;
 //登录
 - (IBAction)swew:(id)sender {
     //在 Mac OS X 裡頭，我們則是要讓 NSWindow 決定他上面的哪個元件應該變成 First Responder
-    [self.newsWindow.window makeFirstResponder:nil];
+//    [self.newsWindow.window makeFirstResponder:nil];
+//    
+//    //[self.window addChildWindow:self.newsWindow.window ordered:NSWindowAbove];
     
-    //[self.window addChildWindow:self.newsWindow.window ordered:NSWindowAbove];
+    
+    // 设为KeyWindow并前置
+    [self.newsWindow.window makeKeyAndOrderFront:self];
+    //强引用这个Window，不然这个Window会在跳转之后的瞬间被销毁
+    AppDelegate *appDelegate = (AppDelegate *)[NSApplication sharedApplication].delegate;
+    appDelegate.mainWindowController = [MainWindowController windowController];
+    appDelegate.openMain = YES;
+
 }
 
 //mini模式
@@ -55,6 +64,9 @@ static MainWindowController *mainWC=nil;
     
     // 设为KeyWindow并前置
     [self.miniWindow.window makeKeyAndOrderFront:self];
+    //强引用这个Window，不然这个Window会在跳转之后的瞬间被销毁
+    AppDelegate *appDelegate = (AppDelegate *)[NSApplication sharedApplication].delegate;
+    appDelegate.mainWindowController = self.miniWindow;
     
     // 关闭现在的登录窗口
 //    [self.window orderOut:self];
@@ -68,7 +80,7 @@ static MainWindowController *mainWC=nil;
 //    - (void)orderWindow:(NSWindowOrderingMode)place relativeTo:(NSInteger)otherWin;
 //    - (void)orderFrontRegardless;
     
-    [self.window orderBack:self];
+    [self.window orderOut:self];
     
 
     /*

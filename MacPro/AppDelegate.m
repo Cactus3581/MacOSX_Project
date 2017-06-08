@@ -22,7 +22,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    _mainWindow = [[MainWindowController alloc]initWithWindowNibName:@"MainWindowController"];
+    _mainWindow = [MainWindowController windowController];
     [[_mainWindow window] center];
     
     
@@ -67,62 +67,60 @@
 
 //通过点击dock上的图标将窗口重新打开
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
+    
     if (!flag){
-        [_mainWindow.window makeKeyAndOrderFront:self];
-        NSLog(@"flag1 = %d",flag);
-
+        //当app所有窗口全部关闭，再点击dock时触发->互斥
+        [_mainWindowController.window makeKeyAndOrderFront:self];
         return YES;
+    }else if(self.openMain) {
+        [_mainWindow.window makeKeyAndOrderFront:self];
     }
-    NSLog(@"flag2 = %d",flag);
-
     return NO;
 }
 
-
-
-- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender{
-    return YES;
-}
-- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename{
-    return YES;
-
-}
-- (void)application:(NSApplication *)sender openFiles:(NSArray<NSString *> *)filenames{
-
-}
-- (BOOL)application:(NSApplication *)sender openTempFile:(NSString *)filename
-{
-    return YES;
-
-}
-- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
-{
-    return YES;
-
-}
-- (BOOL)applicationOpenUntitledFile:(NSApplication *)sender
-{
-    return YES;
-
-}
-- (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename
-{
-    return YES;
-
-}
-- (BOOL)application:(NSApplication *)sender printFile:(NSString *)filename
-{
-    return YES;
-
-}
-- (NSApplicationPrintReply)application:(NSApplication *)application printFiles:(NSArray<NSString *> *)fileNames withSettings:(NSDictionary<NSString *, id> *)printSettings showPrintPanels:(BOOL)showPrintPanels
-{
-    return YES;
-
-}
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
-{
-    return YES;
-
-}
+//- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender{
+//    return YES;
+//}
+//- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename{
+//    return YES;
+//
+//}
+//- (void)application:(NSApplication *)sender openFiles:(NSArray<NSString *> *)filenames{
+//
+//}
+//- (BOOL)application:(NSApplication *)sender openTempFile:(NSString *)filename
+//{
+//    return YES;
+//
+//}
+//- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
+//{
+//    return YES;
+//
+//}
+//- (BOOL)applicationOpenUntitledFile:(NSApplication *)sender
+//{
+//    return YES;
+//
+//}
+//- (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename
+//{
+//    return YES;
+//
+//}
+//- (BOOL)application:(NSApplication *)sender printFile:(NSString *)filename
+//{
+//    return YES;
+//
+//}
+//- (NSApplicationPrintReply)application:(NSApplication *)application printFiles:(NSArray<NSString *> *)fileNames withSettings:(NSDictionary<NSString *, id> *)printSettings showPrintPanels:(BOOL)showPrintPanels
+//{
+//    return YES;
+//
+//}
+//- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+//{
+//    return YES;
+//
+//}
 @end

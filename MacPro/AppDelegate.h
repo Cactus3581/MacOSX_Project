@@ -10,6 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (strong) NSWindowController *mainWindowController;
+@property (assign) BOOL openMain;
 
 
 @end

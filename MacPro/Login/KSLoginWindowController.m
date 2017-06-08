@@ -20,7 +20,7 @@ static NSString *const kChatWindowControllerIdentifier = @"LKKLoginWindowControl
     [super windowDidLoad];
     
     AppDelegate *appDelegate = (AppDelegate *)[NSApplication sharedApplication].delegate;
-//    appDelegate.mainWindowController = self;
+    appDelegate.mainWindowController = self;
     
     [self.window center];
 }

@@ -129,13 +129,15 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     //NSInteger selectedRow = [self.tableView selectedRow];
-    MainWindowController *mainWindow = [[MainWindowController alloc]initWithWindowNibName:@"MainWindowController"];
+    MainWindowController *mainWindow = [MainWindowController windowController];
+
     //强引用这个Window，不然这个Window会在跳转之后的瞬间被销毁
     AppDelegate *appDelegate = (AppDelegate *)[NSApplication sharedApplication].delegate;
     appDelegate.mainWindowController = mainWindow;
     [mainWindow.window makeKeyAndOrderFront:self];
     //关闭现在的登录窗口
     [self.view.window orderOut:self];
+    
 }
 
 // 点击row
