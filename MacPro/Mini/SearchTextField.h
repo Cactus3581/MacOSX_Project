@@ -15,5 +15,5 @@
 @end
 
 @interface SearchTextField : NSTextField
-@property(nonatomic,weak) id<SearchTextFieldDelegate> delegate;
+@property(nonatomic,weak) id<SearchTextFieldDelegate>delegate;
 @end

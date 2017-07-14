@@ -12,6 +12,8 @@
 #import "AppDelegate.h"
 #import "SearchTextField.h"
 #import "KSMiniMeansCellView.h"
+#import "KSLineView.h"
+#import "QuaryWordsView.h"
 
 
 @interface KSMiniViewController ()<NSTableViewDelegate,NSTableViewDataSource,SearchTextFieldDelegate>
@@ -21,6 +23,12 @@
 @property (nonatomic,strong) NSMutableArray *array;
 @property (nonatomic,strong) NSMutableArray *searchArray;
 @property (nonatomic,strong) NSDictionary *searchwordDic;
+@property (weak) IBOutlet NSButton *makeFrontButton;
+@property (weak) IBOutlet NSButton *backMainWindowButton;
+@property (strong) IBOutlet QuaryWordsView *quaryWordsView;
+@property (weak) IBOutlet NSTextField *alertTitleLabel;
+@property (weak) IBOutlet NSTextField *alertContentLabel;
+@property (weak) IBOutlet NSImageView *alertImageView;
 
 @end
 
@@ -31,15 +39,20 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self initView];
-
-    
+    [self initView];
     self.searchHeadView.wantsLayer = YES;
-    self.searchHeadView.layer.cornerRadius  =4;
-    self.searchHeadView.layer.masksToBounds = YES;
-    self.searchHeadView.layer.borderWidth   = 1;
-    self.searchHeadView.layer.borderColor   = [NSColor lightGrayColor].CGColor;
-    self.searchHeadView.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
+    //self.searchHeadView.layer.cornerRadius  =4;
+    //self.searchHeadView.layer.masksToBounds = YES;
+    //self.searchHeadView.layer.borderWidth   = 1;
+    //self.searchHeadView.layer.borderColor   = [NSColor lightGrayColor].CGColor;
+    self.searchHeadView.layer.backgroundColor = [NSColor blueColor].CGColor;
+    self.searchTextfield.layer.backgroundColor = [NSColor redColor].CGColor;
+//    垂直居中：
+//    self.searchTextfield.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    
+//    自动适应宽度：
+//    self.searchTextfield.adjustsFontSizeToFitWidth = YES;
+
     //蓝色选择框
     self.searchTextfield.focusRingType = NSFocusRingTypeNone;
     self.searchTextfield.maximumNumberOfLines = 1;
@@ -50,7 +63,7 @@
     //设置是否绘制背景
     self.searchTextfield.drawsBackground = NO;
     //设置文字颜色
-    self.searchTextfield.textColor = [NSColor blueColor];
+    //self.searchTextfield.textColor = [NSColor blueColor];
     //设置是否显示边框
     self.searchTextfield.bordered = NO;
     //设置是否绘制贝塞尔风格的边框
@@ -58,16 +71,53 @@
     self.searchTextfield.delegate = self;
 }
 
+- (void)addAlertNoWords {
+    [self.view addSubview:self.quaryWordsView];
+    self.alertTitleLabel.stringValue = @"找不到该单词";
+    self.alertContentLabel.stringValue = @"金山词霸提醒您 \n 请检查输入的关键词是否有误 \n 或到建议反馈提出建议";
+}
+
+- (void)addAlertNoNet {
+    [self.view addSubview:self.quaryWordsView];
+    self.alertTitleLabel.stringValue = @"无网络";
+    self.alertContentLabel.stringValue = @"请打开WIFI,或者检查网络设置";
+}
+
+- (void)removeAlertNoWords {
+    [self.quaryWordsView removeFromSuperview];
+}
+
+- (void)removeAlertNoNet {
+    [self.quaryWordsView removeFromSuperview];
+}
+
 - (void)viewWillAppear {
     [super viewWillAppear];
     [self.searchTextfield becomeFirstResponder];
 }
-
+- (BOOL)performKeyEquivalent:(NSEvent *)theEvent{
+    switch ([[theEvent charactersIgnoringModifiers] characterAtIndex:0]) {
+        case NSUpArrowFunctionKey:
+            // Increase by 5 here
+            return YES;
+            break;
+        case NSDownArrowFunctionKey:;
+            // Decrease by 5 here
+            return YES;
+            break;
+        default:
+            break;
+    }
+    return [super performKeyEquivalent:theEvent];
+}
 #pragma mark - 初始化视图
 - (void)initView {
     // 设置背景色为白色
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSDownArrowFunctionKey handler:^(NSEvent * event) {
+        NSLog(@"NSDownArrowFunctionKey");
+    }];
 }
 
 - (void)awakeFromNib {
@@ -222,6 +272,15 @@
         _searchwordDic = [NSDictionary dictionary];
     }
     return _searchwordDic;
+}
+
+
+- (IBAction)makeFrontAction:(id)sender {
+    
+}
+
+- (IBAction)backMainWindowAction:(id)sender {
+    
 }
 
 @end

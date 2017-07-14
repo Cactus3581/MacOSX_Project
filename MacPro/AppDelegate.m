@@ -23,6 +23,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     _mainWindow = [MainWindowController windowController];
+    //window bar透明
+    _mainWindow.window.titlebarAppearsTransparent = YES;
+    //隐藏bar时，可被拖拽
+    _mainWindow.window.movableByWindowBackground = YES;
     [[_mainWindow window] center];
     
     

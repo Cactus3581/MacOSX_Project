@@ -27,13 +27,20 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    self.window.title  = @"mini查词";
+    self.window.title = @"";
+    //window bar透明
+    self.window.titlebarAppearsTransparent = YES;
+    //隐藏bar时，可被拖拽
+    self.window.movableByWindowBackground = YES;
      NSApplication *app=[NSApplication sharedApplication];
     [self.window center];
     [[self.window standardWindowButton:NSWindowZoomButton] setHidden:YES];
     [[self.window standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
     NSLog(@"keyWindow %@",app.keyWindow);
     NSLog(@"mainWindow %@",app.mainWindow);
+    // 设置背景色为白色
+    self.window.contentView.wantsLayer = YES;
+    self.window.contentView.layer.backgroundColor = [NSColor whiteColor].CGColor;
     
 }
 

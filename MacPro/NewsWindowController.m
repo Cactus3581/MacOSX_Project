@@ -8,7 +8,7 @@
 
 #import "NewsWindowController.h"
 #import "AppDelegate.h"
-
+#import <Quartz/Quartz.h>
 @interface NewsWindowController ()
 @property (weak) IBOutlet NSButton *accountLoginButton;
 @property (weak) IBOutlet NSButton *phoneLoginButton;
@@ -17,18 +17,13 @@
 @property (weak) IBOutlet NSView *topButtonBackView;
 @property (weak) IBOutlet NSView *textfieldBackView;
 @property (weak) IBOutlet NSTextField *accountTextfield;
-
 @property (weak) IBOutlet NSButton *gainVerificationCodeButton;
-
 @property (weak) IBOutlet NSButton *loginButton;
 @property (weak) IBOutlet NSView *textfieldLineview;
-
+@property (weak) IBOutlet NSView *lineBottomView;
 @end
 static NewsWindowController *loginWC=nil;
-
 @implementation NewsWindowController
-
-
 
 + (instancetype)windowController{
     static dispatch_once_t onceToken;
@@ -43,6 +38,11 @@ static NewsWindowController *loginWC=nil;
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    //window bar透明
+    self.window.titlebarAppearsTransparent = YES;
+    //隐藏bar时，可被拖拽
+    self.window.movableByWindowBackground = YES;
+    
     //层叠窗口
     self.shouldCascadeWindows = YES;
     [self.window center];
@@ -55,25 +55,28 @@ static NewsWindowController *loginWC=nil;
     NSRange titleRange = NSMakeRange(0, [colorTitle length]);
     [colorTitle addAttribute:NSForegroundColorAttributeName value:color range:titleRange];
     [self.accountLoginButton setAttributedTitle:colorTitle];
+
     self.accountTextfield.placeholderString = @"昵称/邮箱/手机号";
+    
     self.passwordTextfield.placeholderString = @"密码";
     self.lineView.layer.backgroundColor = [NSColor blueColor].CGColor;
     self.gainVerificationCodeButton.hidden = YES;
     self.textfieldBackView.wantsLayer = YES;
-    self.textfieldBackView.layer.cornerRadius  =4;
-    self.textfieldBackView.layer.masksToBounds = YES;
-    self.textfieldBackView.layer.borderWidth   = 1;
-    self.textfieldBackView.layer.borderColor   = [NSColor lightGrayColor].CGColor;
     self.textfieldLineview.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
     self.accountTextfield.focusRingType = NSFocusRingTypeNone;
     self.passwordTextfield.focusRingType = NSFocusRingTypeNone;
     self.accountTextfield.maximumNumberOfLines = 1;
     self.passwordTextfield.maximumNumberOfLines = 1;
+    self.lineBottomView.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
     [[self.accountTextfield
       cell] setLineBreakMode:NSLineBreakByWordWrapping];
     
     [[self.accountTextfield
       cell] setTruncatesLastVisibleLine:YES];
+    
+    self.loginButton.wantsLayer = YES;
+    self.loginButton.layer.backgroundColor = [NSColor blueColor].CGColor;
+    self.loginButton.layer.cornerRadius = self.accountLoginButton.bounds.size.height/2;
 }
 
 - (IBAction)accountLogin:(id)sender {
@@ -90,7 +93,12 @@ static NewsWindowController *loginWC=nil;
     [self.phoneLoginButton setAttributedTitle:colorTitle1];
     
     if (!self.gainVerificationCodeButton.hidden) {
-        self.lineView.layer.transform = CATransform3DIdentity;
+        CABasicAnimation *anima = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+        anima.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+        anima.duration = .25f;
+        anima.removedOnCompletion = NO;
+        anima.fillMode = kCAFillModeForwards;
+        [self.lineView.layer addAnimation:anima forKey:nil];
     }
     self.gainVerificationCodeButton.hidden = YES;
     self.accountTextfield.placeholderString = @"昵称/邮箱/手机号";
@@ -110,7 +118,12 @@ static NewsWindowController *loginWC=nil;
     [colorTitle1 addAttribute:NSForegroundColorAttributeName value:color1 range:titleRange1];
     [self.accountLoginButton setAttributedTitle:colorTitle1];
     if (self.gainVerificationCodeButton.hidden) {
-        self.lineView.layer.transform = CATransform3DMakeTranslation(self.lineView.bounds.size.width+30, 0, 0);
+        CABasicAnimation *anima = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];//
+        anima.toValue = [NSNumber numberWithFloat:self.lineView.bounds.size.width+30];
+        anima.duration = .25f;
+        anima.removedOnCompletion = NO;
+        anima.fillMode = kCAFillModeForwards;
+        [self.lineView.layer addAnimation:anima forKey:nil];
     }
     self.gainVerificationCodeButton.hidden = NO;
     self.accountTextfield.placeholderString = @"手机号";

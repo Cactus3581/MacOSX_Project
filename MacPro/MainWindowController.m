@@ -29,6 +29,7 @@ static MainWindowController *mainWC=nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         mainWC= [[MainWindowController alloc]initWithWindowNibName:@"MainWindowController"];
+        mainWC.window.title = @"";
     });
     // 设置动画样式
     [mainWC.window setAnimationBehavior:NSWindowAnimationBehaviorDocumentWindow];
@@ -38,8 +39,44 @@ static MainWindowController *mainWC=nil;
 - (void)windowDidLoad {
     [super windowDidLoad];
 //    self.pushButton.wantsLayer = _miniWindow;
+    self.window.backgroundColor = [NSColor whiteColor];
+    
+    
+//    [self.window setContentBorderThickness:62.0 forEdge:NSMinYEdge];
+    
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    [shadow setShadowColor:[NSColor colorWithDeviceWhite:0.1 alpha:0.6]];
+//    [shadow setShadowOffset:NSMakeSize(0, 20)];
+//    [shadow setShadowBlurRadius:20];
+//    [self.pushButton setShadow:shadow];
+    [self.pushButton.layer setShadowColor:[NSColor redColor].CGColor];
+    [self.pushButton.layer setShadowOffset:CGSizeMake(0, 8)];
+    [self.pushButton.layer setShouldRasterize:YES];
+    [self.pushButton.layer setShadowRadius:8];
+    [self.pushButton.layer setShadowOpacity:0.4];
+    
+    
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSDownArrowFunctionKey handler:^(NSEvent * event) {
+        NSLog(@"NSDownArrowFunctionKey");
+    }];
+    
+
+
+    
+
+
     
 }
+
+
+- (void)mouseUp:(NSEvent *)event{
+    [super mouseUp:event];
+}
+
+- (void)keyUp:(NSEvent *)event{
+    [super keyUp:event];
+}
+
 
 #pragma mark - 跳转方法目前发现3种
 //登录

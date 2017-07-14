@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="tt3-Tz-NLI" customClass="KSLineView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="1"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="1By-vw-6Tn" customClass="KSLineView">
+                    <rect key="frame" x="0.0" y="0.0" width="163" height="1"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1By-vw-6Tn" secondAttribute="bottom" id="cTd-Dk-bh3"/>
+                <constraint firstItem="1By-vw-6Tn" firstAttribute="top" secondItem="tt3-Tz-NLI" secondAttribute="top" id="dI7-XC-GOL"/>
+                <constraint firstItem="1By-vw-6Tn" firstAttribute="leading" secondItem="tt3-Tz-NLI" secondAttribute="leading" id="wPM-uy-k1p"/>
+                <constraint firstAttribute="trailing" secondItem="1By-vw-6Tn" secondAttribute="trailing" id="zie-HP-J4M"/>
+            </constraints>
+            <connections>
+                <outlet property="lineView" destination="1By-vw-6Tn" id="ai3-sT-zcX"/>
+            </connections>
+            <point key="canvasLocation" x="-21.5" y="110.5"/>
+        </customView>
+    </objects>
+</document>
